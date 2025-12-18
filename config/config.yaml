@@ -1,0 +1,32 @@
+design_patterns:
+  include_diagrams: true
+  min_pattern_occurrences: 3
+  output_format: mermaid
+logging:
+  file: logs/app.log
+  level: INFO
+  max_size: 10 MB
+  retention: 7 days
+model:
+  context_window: 4096
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+output:
+  format: jsonl
+  output_dir: ./data
+  split_ratio:
+    test: 0.1
+    train: 0.8
+    validation: 0.1
+qa_generation:
+  max_answer_length: 500
+  max_code_context_lines: 20
+  max_questions_per_file: 10
+  min_answer_length: 20
+  min_code_context_lines: 5
+repositories:
+- languages:
+  - python
+  path: "D:\\Pioneer\\Career\\\u7B80\u5386\\2025\\\u8F6F\u4EF6\u5DE5\u7A0B\u5E08-\u6C47\
+    \u4E30\\hw\\CascadeProjects\\windsurf-project\\code_repo2\\LightX2V-main"

@@ -1,0 +1,201 @@
+{
+  "design_patterns": [
+    {
+      "pattern_type": "factory",
+      "description": "Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.",
+      "location": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\utils.py",
+      "confidence": 0.6,
+      "code_snippets": [
+        "\n\ndef create_prefixed_exception(original_exception: Exception, prefix: str) -> Exception:\n    \"\"\"\n    Safely create a prefixed exception that adapts to all error types.",
+        "\n\ndef make_relation_chunk_key(src: str, tgt: str) -> str:\n    \"\"\"Create a deterministic storage key for relation chunk tracking.\"\"\"\n"
+      ],
+      "related_patterns": [],
+      "metadata": {}
+    },
+    {
+      "pattern_type": "factory",
+      "description": "Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.",
+      "location": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\tests\\test_lightrag_ollama_chat.py",
+      "confidence": 0.6,
+      "code_snippets": [
+        "\n\ndef create_chat_request_data(\n    content: str,\n    stream: bool = False,",
+        "\n\ndef make_request(\n    url: str, data: Dict[str, Any], stream: bool = False, check_status: bool = True\n) -> requests.Response:"
+      ],
+      "related_patterns": [],
+      "metadata": {}
+    }
+  ],
+  "architecture": {
+    "layers": [
+      {
+        "name": "infrastructure",
+        "description": "Provides technical capabilities to support higher layers",
+        "file_count": 2
+      }
+    ],
+    "patterns": [
+      {
+        "pattern_type": "factory",
+        "description": "Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.",
+        "location": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\utils.py",
+        "confidence": 0.6,
+        "code_snippets": [
+          "\n\ndef create_prefixed_exception(original_exception: Exception, prefix: str) -> Exception:\n    \"\"\"\n    Safely create a prefixed exception that adapts to all error types.",
+          "\n\ndef make_relation_chunk_key(src: str, tgt: str) -> str:\n    \"\"\"Create a deterministic storage key for relation chunk tracking.\"\"\"\n"
+        ],
+        "related_patterns": [],
+        "metadata": {}
+      },
+      {
+        "pattern_type": "factory",
+        "description": "Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created.",
+        "location": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\tests\\test_lightrag_ollama_chat.py",
+        "confidence": 0.6,
+        "code_snippets": [
+          "\n\ndef create_chat_request_data(\n    content: str,\n    stream: bool = False,",
+          "\n\ndef make_request(\n    url: str, data: Dict[str, Any], stream: bool = False, check_status: bool = True\n) -> requests.Response:"
+        ],
+        "related_patterns": [],
+        "metadata": {}
+      }
+    ],
+    "module_dependencies": {
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\examples\\raganything_example.py": [
+        "import traceback"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\examples\\rerank_example.py": [
+        "import traceback"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\lightrag.py": [
+        "from lightrag.utils import aexport_data as utils_aexport_data"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\rerank.py": [
+        "from .utils import TiktokenTokenizer"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\utils.py": [
+        "import importlib"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\utils_graph.py": [
+        "from .utils import make_relation_chunk_key"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\api\\gunicorn_config.py": [
+        "import psutil"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\api\\lightrag_server.py": [
+        "from lightrag.llm.lollms import lollms_embed",
+        "from lightrag.llm.ollama import ollama_embed",
+        "from lightrag.llm.binding_options import OllamaEmbeddingOptions",
+        "from lightrag.llm.azure_openai import azure_openai_embed",
+        "from lightrag.llm.bedrock import bedrock_embed",
+        "from lightrag.llm.jina import jina_embed",
+        "from lightrag.llm.gemini import gemini_embed",
+        "from lightrag.llm.openai import openai_embed",
+        "from lightrag.llm.binding_options import GeminiEmbeddingOptions"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\api\\run_with_gunicorn.py": [
+        "from lightrag.api.lightrag_server import get_application"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\api\\routers\\document_routes.py": [
+        "from lightrag.kg.shared_storage import get_namespace_data, get_namespace_lock"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\api\\routers\\query_routes.py": [
+        "from fastapi.responses import StreamingResponse"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\evaluation\\__init__.py": [
+        "from .eval_rag_quality import RAGEvaluator"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\json_kv_impl.py": [
+        "from lightrag.utils import generate_cache_key"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\milvus_impl.py": [
+        "import time"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\mongo_impl.py": [
+        "import traceback"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\neo4j_impl.py": [
+        "from collections import deque"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\postgres_impl.py": [
+        "from collections import deque"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\qdrant_impl.py": [
+        "import time"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\redis_impl.py": [
+        "from lightrag.utils import generate_cache_key"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\shared_storage.py": [
+        "from lightrag.utils import logger"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\kg\\deprecated\\chroma_impl.py": [
+        "import time"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\bedrock.py": [
+        "import logging",
+        "import logging"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\binding_options.py": [
+        "from io import StringIO"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\hf.py": [
+        "from lightrag.utils import logger"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\lmdeploy.py": [
+        "from lightrag.utils import logger",
+        "import lmdeploy",
+        "from lmdeploy import version_info, GenerationConfig"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\lollms.py": [
+        "from lightrag.utils import logger"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\openai.py": [
+        "from openai import AsyncAzureOpenAI"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\llm\\zhipu.py": [
+        "from zhipuai import ZhipuAI"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\tools\\check_initialization.py": [
+        "from lightrag.llm.openai import openai_embed, gpt_4o_mini_complete",
+        "import shutil"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\tools\\clean_llm_query_cache.py": [
+        "from lightrag.kg.shared_storage import initialize_share_data",
+        "import traceback",
+        "from lightrag.kg.shared_storage import finalize_share_data"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\tools\\download_cache.py": [
+        "import argparse",
+        "import traceback"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\tools\\migrate_llm_cache.py": [
+        "from lightrag.kg.shared_storage import initialize_share_data",
+        "import traceback",
+        "from lightrag.kg.shared_storage import finalize_share_data"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\tools\\lightrag_visualizer\\graph_visualizer.py": [
+        "from PIL import Image"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\tests\\conftest.py": [
+        "import os"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\tests\\test_lightrag_ollama_chat.py": [
+        "import asyncio",
+        "import aiohttp",
+        "from contextlib import asynccontextmanager"
+      ],
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\tests\\test_workspace_isolation.py": [
+        "from lightrag import LightRAG",
+        "from lightrag.utils import EmbeddingFunc, Tokenizer",
+        "import json"
+      ]
+    },
+    "entry_points": [
+      "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo1\\LightRAG-main\\lightrag\\lightrag.py"
+    ]
+  },
+  "metadata": {
+    "generated_at": "2025-12-18T21:27:39.063241",
+    "total_patterns": 2
+  }
+}

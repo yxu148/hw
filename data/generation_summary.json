@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "start_time": "2025-12-18T21:32:01.541025",
+  "repositories": {
+    "LightX2V-main": {
+      "path": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\code_repo2\\LightX2V-main",
+      "status": "completed",
+      "qa_pairs": 10758,
+      "design_patterns": 0,
+      "errors": 0,
+      "output_files": {
+        "qa_pairs": "data\\LightX2V-main_training_data_qa.jsonl"
+      },
+      "start_time": "2025-12-18T21:32:01.546173",
+      "end_time": "2025-12-18T21:32:07.219936"
+    }
+  },
+  "statistics": {
+    "total_repositories": 1,
+    "successful_repositories": 1,
+    "failed_repositories": 0,
+    "total_qa_pairs": 10758,
+    "total_patterns": 0,
+    "total_errors": 0
+  },
+  "configuration": {
+    "config_path": "D:\\Pioneer\\Career\\简历\\2025\\软件工程师-汇丰\\hw\\CascadeProjects\\windsurf-project\\unknown",
+    "output_dir": "data"
+  },
+  "errors": [],
+  "end_time": "2025-12-18T21:32:07.863455",
+  "duration_seconds": 6.32243,
+  "duration_human_readable": "0:00:06.322430"
+}

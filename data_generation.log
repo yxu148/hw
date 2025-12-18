@@ -1,0 +1,257 @@
+2025-12-18 20:45:51,846 - __main__ - INFO - Starting training data generation...
+2025-12-18 20:45:51,873 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 20:45:51,874 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 20:45:51,874 - __main__ - INFO - 
+==================================================
+2025-12-18 20:45:51,878 - __main__ - INFO - Processing repository: paper2presentation
+2025-12-18 20:45:51,878 - __main__ - INFO - Path: D:\Application\ai_learn\llm\paper2presentation
+2025-12-18 20:45:51,878 - __main__ - INFO - Languages: python
+2025-12-18 20:45:51,880 - __main__ - INFO - Started at: 2025-12-18 20:45:51
+2025-12-18 20:45:51,880 - __main__ - INFO - ==================================================
+2025-12-18 20:45:51,884 - __main__ - INFO - Analyzing repository at D:\Application\ai_learn\llm\paper2presentation (languages: python)...
+2025-12-18 20:45:51,884 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 20:45:51,996 - __main__ - INFO - Repository processing complete. Files: 2 processed, 0 failed, 21 QA pairs generated, 0 design patterns found
+2025-12-18 20:45:52,001 - __main__ - INFO - Saved 21 QA pairs to data\paper2presentation_training_data_qa.jsonl
+2025-12-18 20:45:52,001 - __main__ - INFO - Successfully processed repository: paper2presentation
+2025-12-18 20:45:52,006 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 20:45:52,006 - __main__ - INFO - Training data generation complete!
+2025-12-18 20:45:52,008 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 20:45:52,008 - __main__ - INFO - Total repositories: 1
+2025-12-18 20:45:52,008 - __main__ - INFO - Successfully processed: 1
+2025-12-18 20:45:52,008 - __main__ - INFO - Failed: 0
+2025-12-18 20:45:52,008 - __main__ - INFO - Total QA pairs generated: 21
+2025-12-18 20:45:52,008 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 20:45:52,008 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 20:45:52,008 - __main__ - INFO - Duration: 0:00:00.128435
+2025-12-18 20:45:52,008 - __main__ - INFO - ==================================================
+2025-12-18 20:53:19,560 - __main__ - INFO - Starting training data generation...
+2025-12-18 20:53:19,562 - __main__ - INFO - Configuration: {
+  "design_patterns": {
+    "include_diagrams": true,
+    "min_pattern_occurrences": 3,
+    "output_format": "mermaid"
+  },
+  "logging": {
+    "file": "logs/app.log",
+    "level": "INFO",
+    "max_size": "10 MB",
+    "retention": "7 days"
+  },
+  "model": {
+    "context_window": 4096,
+    "max_new_tokens": 512,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "output": {
+    "format": "jsonl",
+    "output_dir": "./data",
+    "split_ratio": {
+      "test": 0.1,
+      "train": 0.8,
+      "validation": 0.1
+    }
+  },
+  "qa_generation": {
+    "max_answer_length": 500,
+    "max_code_context_lines": 20,
+    "max_questions_per_file": 10,
+    "min_answer_length": 20,
+    "min_code_context_lines": 5
+  },
+  "repositories": [
+    {
+      "languages": [
+        "python"
+      ],
+      "path": "D:\\Application\\ai_learn\\llm\\paper2presentation"
+    }
+  ],
+  "_config_path": "D:\\Pioneer\\Career\\\u7b80\u5386\\2025\\\u8f6f\u4ef6\u5de5\u7a0b\u5e08-\u6c47\u4e30\\hw\\CascadeProjects\\windsurf-project\\config\\config.yaml"
+}
+2025-12-18 20:53:19,562 - __main__ - CRITICAL - Failed to initialize TrainingDataGenerator: expected str, bytes or os.PathLike object, not dict
+2025-12-18 20:53:19,562 - __main__ - CRITICAL - Fatal error: expected str, bytes or os.PathLike object, not dict
+Traceback (most recent call last):
+  File "D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\process_repo.py", line 581, in main
+    generator = TrainingDataGenerator(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\process_repo.py", line 43, in __init__
+    self.config = self._load_config(config_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\process_repo.py", line 86, in _load_config
+    config_path = Path(config_path)
+                  ^^^^^^^^^^^^^^^^^
+  File "D:\Application\miniconda3\envs\repo\Lib\pathlib.py", line 871, in __new__
+    self = cls._from_parts(args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Application\miniconda3\envs\repo\Lib\pathlib.py", line 509, in _from_parts
+    drv, root, parts = self._parse_args(args)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Application\miniconda3\envs\repo\Lib\pathlib.py", line 493, in _parse_args
+    a = os.fspath(a)
+        ^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not dict
+2025-12-18 21:03:27,569 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:03:27,570 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:03:27,570 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:03:27,570 - __main__ - INFO - 
+==================================================
+2025-12-18 21:03:27,570 - __main__ - INFO - Processing repository: paper2presentation
+2025-12-18 21:03:27,570 - __main__ - INFO - Path: D:\Application\ai_learn\llm\paper2presentation
+2025-12-18 21:03:27,570 - __main__ - INFO - Languages: python
+2025-12-18 21:03:27,570 - __main__ - INFO - Started at: 2025-12-18 21:03:27
+2025-12-18 21:03:27,570 - __main__ - INFO - ==================================================
+2025-12-18 21:03:27,583 - __main__ - INFO - Analyzing repository at D:\Application\ai_learn\llm\paper2presentation (languages: python)...
+2025-12-18 21:03:27,584 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:03:27,619 - __main__ - INFO - Repository processing complete. Files: 2 processed, 0 failed, 21 QA pairs generated, 0 design patterns found
+2025-12-18 21:03:27,625 - __main__ - INFO - Saved 21 QA pairs to data\paper2presentation_training_data_qa.jsonl
+2025-12-18 21:03:27,625 - __main__ - INFO - Successfully processed repository: paper2presentation
+2025-12-18 21:03:27,629 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:03:27,629 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:03:27,630 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:03:27,630 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:03:27,630 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:03:27,631 - __main__ - INFO - Failed: 0
+2025-12-18 21:03:27,631 - __main__ - INFO - Total QA pairs generated: 21
+2025-12-18 21:03:27,631 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 21:03:27,631 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:03:27,631 - __main__ - INFO - Duration: 0:00:00.054973
+2025-12-18 21:03:27,631 - __main__ - INFO - ==================================================
+2025-12-18 21:04:19,118 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:04:19,124 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:04:19,129 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:04:19,132 - __main__ - INFO - 
+==================================================
+2025-12-18 21:04:19,132 - __main__ - INFO - Processing repository: paper2presentation
+2025-12-18 21:04:19,132 - __main__ - INFO - Path: D:\Application\ai_learn\llm\paper2presentation
+2025-12-18 21:04:19,132 - __main__ - INFO - Languages: python
+2025-12-18 21:04:19,133 - __main__ - INFO - Started at: 2025-12-18 21:04:19
+2025-12-18 21:04:19,133 - __main__ - INFO - ==================================================
+2025-12-18 21:04:19,134 - __main__ - INFO - Analyzing repository at D:\Application\ai_learn\llm\paper2presentation (languages: python)...
+2025-12-18 21:04:19,134 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:04:19,177 - __main__ - INFO - Repository processing complete. Files: 2 processed, 0 failed, 21 QA pairs generated, 0 design patterns found
+2025-12-18 21:04:19,177 - __main__ - INFO - Saved 21 QA pairs to data\paper2presentation_training_data_qa.jsonl
+2025-12-18 21:04:19,177 - __main__ - INFO - Successfully processed repository: paper2presentation
+2025-12-18 21:04:19,184 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:04:19,184 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:04:19,184 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:04:19,184 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:04:19,185 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:04:19,186 - __main__ - INFO - Failed: 0
+2025-12-18 21:04:19,186 - __main__ - INFO - Total QA pairs generated: 21
+2025-12-18 21:04:19,186 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 21:04:19,186 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:04:19,186 - __main__ - INFO - Duration: 0:00:00.053571
+2025-12-18 21:04:19,186 - __main__ - INFO - ==================================================
+2025-12-18 21:05:05,756 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:05:05,762 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:05:05,768 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:05:05,769 - __main__ - INFO - 
+==================================================
+2025-12-18 21:05:05,770 - __main__ - INFO - Processing repository: paper2presentation
+2025-12-18 21:05:05,771 - __main__ - INFO - Path: D:\Application\ai_learn\llm\paper2presentation
+2025-12-18 21:05:05,771 - __main__ - INFO - Languages: python
+2025-12-18 21:05:05,771 - __main__ - INFO - Started at: 2025-12-18 21:05:05
+2025-12-18 21:05:05,771 - __main__ - INFO - ==================================================
+2025-12-18 21:05:05,773 - __main__ - INFO - Analyzing repository at D:\Application\ai_learn\llm\paper2presentation (languages: python)...
+2025-12-18 21:05:05,773 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:05:05,822 - __main__ - INFO - Repository processing complete. Files: 2 processed, 0 failed, 21 QA pairs generated, 0 design patterns found
+2025-12-18 21:05:05,822 - __main__ - INFO - Saved 21 QA pairs to data\paper2presentation_training_data_qa.jsonl
+2025-12-18 21:05:05,822 - __main__ - INFO - Successfully processed repository: paper2presentation
+2025-12-18 21:05:05,822 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:05:05,833 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:05:05,833 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:05:05,833 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:05:05,833 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:05:05,833 - __main__ - INFO - Failed: 0
+2025-12-18 21:05:05,833 - __main__ - INFO - Total QA pairs generated: 21
+2025-12-18 21:05:05,833 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 21:05:05,836 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:05:05,836 - __main__ - INFO - Duration: 0:00:00.060411
+2025-12-18 21:05:05,836 - __main__ - INFO - ==================================================
+2025-12-18 21:12:46,012 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:12:46,021 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:12:46,022 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:12:46,024 - __main__ - INFO - 
+==================================================
+2025-12-18 21:12:46,024 - __main__ - INFO - Processing repository: paper2presentation
+2025-12-18 21:12:46,024 - __main__ - INFO - Path: D:\Application\ai_learn\llm\paper2presentation
+2025-12-18 21:12:46,024 - __main__ - INFO - Languages: python
+2025-12-18 21:12:46,024 - __main__ - INFO - Started at: 2025-12-18 21:12:46
+2025-12-18 21:12:46,024 - __main__ - INFO - ==================================================
+2025-12-18 21:12:46,024 - __main__ - INFO - Analyzing repository at D:\Application\ai_learn\llm\paper2presentation (languages: python)...
+2025-12-18 21:12:46,024 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:12:46,063 - __main__ - INFO - Repository processing complete. Files: 2 processed, 0 failed, 21 QA pairs generated, 0 design patterns found
+2025-12-18 21:12:46,069 - __main__ - INFO - Saved 21 QA pairs to data\paper2presentation_training_data_qa.jsonl
+2025-12-18 21:12:46,069 - __main__ - INFO - Successfully processed repository: paper2presentation
+2025-12-18 21:12:46,072 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:12:46,072 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:12:46,072 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:12:46,072 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:12:46,072 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:12:46,072 - __main__ - INFO - Failed: 0
+2025-12-18 21:12:46,072 - __main__ - INFO - Total QA pairs generated: 21
+2025-12-18 21:12:46,074 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 21:12:46,074 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:12:46,074 - __main__ - INFO - Duration: 0:00:00.047925
+2025-12-18 21:12:46,074 - __main__ - INFO - ==================================================
+2025-12-18 21:27:35,027 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:27:35,051 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:27:35,053 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:27:35,053 - __main__ - INFO - 
+==================================================
+2025-12-18 21:27:35,053 - __main__ - INFO - Processing repository: LightRAG-main
+2025-12-18 21:27:35,053 - __main__ - INFO - Path: D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\code_repo1\LightRAG-main
+2025-12-18 21:27:35,053 - __main__ - INFO - Languages: python
+2025-12-18 21:27:35,053 - __main__ - INFO - Started at: 2025-12-18 21:27:35
+2025-12-18 21:27:35,053 - __main__ - INFO - ==================================================
+2025-12-18 21:27:35,058 - __main__ - INFO - Analyzing repository at D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\code_repo1\LightRAG-main (languages: python)...
+2025-12-18 21:27:35,058 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:27:38,593 - __main__ - INFO - Repository processing complete. Files: 92 processed, 0 failed, 4654 QA pairs generated, 2 design patterns found
+2025-12-18 21:27:39,062 - __main__ - INFO - Saved 4654 QA pairs to data\LightRAG-main_training_data_qa.jsonl
+2025-12-18 21:27:39,063 - __main__ - INFO - Saved 2 design patterns to data\LightRAG-main_training_data_patterns.json
+2025-12-18 21:27:39,063 - __main__ - INFO - Successfully processed repository: LightRAG-main
+2025-12-18 21:27:39,063 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:27:39,063 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:27:39,063 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:27:39,063 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:27:39,063 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:27:39,063 - __main__ - INFO - Failed: 0
+2025-12-18 21:27:39,069 - __main__ - INFO - Total QA pairs generated: 4654
+2025-12-18 21:27:39,069 - __main__ - INFO - Total design patterns found: 2
+2025-12-18 21:27:39,069 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:27:39,069 - __main__ - INFO - Duration: 0:00:04.010994
+2025-12-18 21:27:39,070 - __main__ - INFO - ==================================================
+2025-12-18 21:32:01,516 - __main__ - INFO - Starting training data generation...
+2025-12-18 21:32:01,541 - __main__ - INFO - TrainingDataGenerator initialized successfully
+2025-12-18 21:32:01,543 - __main__ - INFO - Starting processing of 1 repositories...
+2025-12-18 21:32:01,545 - __main__ - INFO - 
+==================================================
+2025-12-18 21:32:01,545 - __main__ - INFO - Processing repository: LightX2V-main
+2025-12-18 21:32:01,546 - __main__ - INFO - Path: D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\code_repo2\LightX2V-main
+2025-12-18 21:32:01,546 - __main__ - INFO - Languages: python
+2025-12-18 21:32:01,546 - __main__ - INFO - Started at: 2025-12-18 21:32:01
+2025-12-18 21:32:01,546 - __main__ - INFO - ==================================================
+2025-12-18 21:32:01,548 - __main__ - INFO - Analyzing repository at D:\Pioneer\Career\简历\2025\软件工程师-汇丰\hw\CascadeProjects\windsurf-project\code_repo2\LightX2V-main (languages: python)...
+2025-12-18 21:32:01,548 - analyzer.code_analyzer - WARNING - Could not load tree-sitter language: type object 'tree_sitter.Language' has no attribute 'build_library'
+2025-12-18 21:32:07,219 - __main__ - INFO - Repository processing complete. Files: 291 processed, 0 failed, 10758 QA pairs generated, 0 design patterns found
+2025-12-18 21:32:07,862 - __main__ - INFO - Saved 10758 QA pairs to data\LightX2V-main_training_data_qa.jsonl
+2025-12-18 21:32:07,863 - __main__ - INFO - Successfully processed repository: LightX2V-main
+2025-12-18 21:32:07,865 - __main__ - INFO - 
+--------------------------------------------------
+2025-12-18 21:32:07,867 - __main__ - INFO - Training data generation complete!
+2025-12-18 21:32:07,867 - __main__ - INFO - Summary saved to: data\generation_summary.json
+2025-12-18 21:32:07,867 - __main__ - INFO - Total repositories: 1
+2025-12-18 21:32:07,867 - __main__ - INFO - Successfully processed: 1
+2025-12-18 21:32:07,869 - __main__ - INFO - Failed: 0
+2025-12-18 21:32:07,869 - __main__ - INFO - Total QA pairs generated: 10758
+2025-12-18 21:32:07,869 - __main__ - INFO - Total design patterns found: 0
+2025-12-18 21:32:07,869 - __main__ - INFO - Total errors encountered: 0
+2025-12-18 21:32:07,869 - __main__ - INFO - Duration: 0:00:06.322430
+2025-12-18 21:32:07,869 - __main__ - INFO - ==================================================
